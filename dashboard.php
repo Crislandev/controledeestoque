@@ -89,9 +89,10 @@ if (!isset($_SESSION['user'])) {
 
 <!-- RODAPÉ -->
 <footer class="footer">
-  © 2025 Controle de Estoque — Todos os Direitos Reservados
+  Todos os Direitos Reservados © CrislanDEV 2025
 </footer>
 
 <script src="assets/script.js"></script>
 </body>
 </html>
+
