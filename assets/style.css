@@ -1,0 +1,118 @@
+/* ====== ESTILO GERAL ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== CONTAINER ====== */
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* ====== CAIXA DE LOGIN ====== */
+.login-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.login-box h1 {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.login-box h2 {
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* ====== CAMPOS DE ENTRADA ====== */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* Animação de label flutuante */
+.input-group input:focus,
+.input-group input:valid {
+  border-color: #0d6efd;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  font-size: 12px;
+  color: #0d6efd;
+  padding: 0 4px;
+}
+
+/* ====== BOTÃO ====== */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #084298;
+  transform: scale(1.02);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .login-box h1 {
+    font-size: 1.5rem;
+  }
+}

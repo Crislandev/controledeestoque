@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS estoque_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE estoque_db;
+
+-- Usuários do sistema
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  usuario VARCHAR(50) UNIQUE NOT NULL,
+  senha VARCHAR(255) NOT NULL
+);
+
+-- Produtos
+CREATE TABLE produtos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  sku VARCHAR(100),
+  descricao TEXT,
+  quantidade INT DEFAULT 0,
+  preco DECIMAL(10,2) DEFAULT 0.00,
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Movimentações de estoque
+CREATE TABLE movimentacoes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  produto_id INT NOT NULL,
+  tipo ENUM('entrada','saida') NOT NULL,
+  quantidade INT NOT NULL,
+  usuario_id INT NOT NULL,
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (produto_id) REFERENCES produtos(id) ON DELETE CASCADE,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+-- Criar usuário administrador inicial
+INSERT INTO usuarios (nome, usuario, senha)
+VALUES ('Administrador', 'admin', '12345');

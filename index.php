@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Controle de Estoque</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Controle de Estoque</h1>
+      <h2>Bem-vindo</h2>
+      <form action="auth.php?action=login" method="POST">
+        <div class="input-group">
+          <input type="text" name="usuario" id="usuario" required>
+          <label for="usuario">Usuário</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="senha" id="senha" required>
+          <label for="senha">Senha</label>
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
