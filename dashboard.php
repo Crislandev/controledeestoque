@@ -47,26 +47,26 @@ if (!isset($_SESSION['user'])) {
 
   <!-- PRODUTOS -->
   <section class="card table-card">
-  <h2>📋 Produtos Cadastrados</h2>
+    <h2>📋 Produtos Cadastrados</h2>
 
-  <div class="search-box">
-    <input type="text" id="buscar" placeholder="🔍 Buscar produto..." onkeyup="buscarProduto()">
-  </div>
+    <div class="search-box">
+      <input type="text" id="buscar" placeholder="🔍 Buscar produto..." onkeyup="buscarProduto()">
+    </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Marca</th>
-        <th>Qtd</th>
-        <th>Preço</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody id="tabela"></tbody>
-  </table>
-</section>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Marca</th>
+          <th>Qtd</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela"></tbody>
+    </table>
+  </section>
 
   <!-- MOVIMENTAÇÕES -->
   <section class="card table-card">
@@ -87,7 +87,11 @@ if (!isset($_SESSION['user'])) {
 
 </main>
 
+<!-- RODAPÉ -->
+<footer class="footer">
+  © 2025 Controle de Estoque — Todos os Direitos Reservados
+</footer>
+
 <script src="assets/script.js"></script>
 </body>
 </html>
-
