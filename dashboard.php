@@ -1,7 +1,7 @@
 <?php
 require 'db.php';
 if (!isset($_SESSION['user'])) {
-  header("Location: index.php");
+  header("Location: index.html");
   exit;
 }
 ?>
@@ -90,3 +90,4 @@ if (!isset($_SESSION['user'])) {
 <script src="assets/script.js"></script>
 </body>
 </html>
+
